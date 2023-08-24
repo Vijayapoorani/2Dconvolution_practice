@@ -1,5 +1,4 @@
 from pydantic import BaseModel, validator
-from typing import List
 from typing import List,Tuple
 from Convolution2D import udf_conv2d
 import numpy as np
