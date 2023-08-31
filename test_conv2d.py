@@ -4,41 +4,8 @@ from Convolution2D import udf_conv2d
 
 
 
-# def test_assert_equality():
-    # input_data = np.ones((3,3),int)
-                            
 
-    # kernel = np.ones((2,2),int)
-                       
-    # stride = (1, 1)
-    # padding = (1, 1)
 
-    # output = udf_conv2d(input_data, kernel, stride, padding)
-
-    # expected_output = np.array([[1, 2, 2, 1], 
-                                # [2, 4, 4, 2],
-                                # [2, 4, 4, 2],
-                                # [1, 2, 2, 1]])
-
-    # np.testing.assert_allclose(output, expected_output, rtol=1e-6)
-
-# def test_assert_inequality():
-    # input_data = np.array([[1, 2, 3, 4, 5],
-                           # [6, 7, 8, 9, 10],
-                           # [11, 12, 13, 14, 15],
-                           # [16, 17, 18, 19, 20]])
-    # kernel = np.array([[0.5, 1],
-                       # [1, 0.5]])
-    # stride = (2, 2)
-    # padding = (1, 1)
-
-    # output = udf_conv2d(input_data, kernel, stride, padding)
-
-    # expected_output = np.array([[33.6, 40.5],  # Intentional difference
-                                # [73.5, 80.5]])
-
-    # with pytest.raises(AssertionError):
-        # np.testing.assert_allclose(output, expected_output, rtol=1e-6)
 
 @pytest.fixture
 def expected_output_shape():
