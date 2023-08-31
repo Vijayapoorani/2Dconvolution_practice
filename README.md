@@ -3,7 +3,10 @@
 
 ## Description
 
-This Python function implements a 2D convolution operation with support for stride and padding. It takes input data, a kernel matrix, stride values, and padding values as arguments and produces the convolution result.
+This Python function implements a 2D convolution operation with support for stride and padding. It takes input data, a kernel matrix, stride values, and padding values as arguments and produces the convolution result. Stride and padding supports different values along row and column.  Other cases handled are as follows:
+1. Kernel size can't be bigger than data size
+2. Stride length should be a positive non-zero value and padding must contain non-negative  integer
+3. The input and kernel need not be sqaure matrices
 
 ## Usage
 
@@ -44,7 +47,7 @@ padding = (1, 1)
 
 The repository also includes tests using the pytest framework and parameter validation using Pydantic. The test files are as follows:
 
-- `test_conv2d.py`: Contains pytest test cases for the convolution function.
+- `test_conv2d.py`: Contains pytest test cases for the convolution function. Only if the test that checks if the output shape of the result matches with the expected output shape (arrived by using the formula : ((input size - kernel size + 2* padding)/Stride length) + 1) is passed, the  expected result will be compared with the actual result.
 - `validation.py`: Contains example test cases for Pydantic parameter validation.
 
 To run the test file run  pytest and to run validation file type python validation.py in your terminal
